@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre Chachapoyas, sus atractivos turísticos, cultura, historia y gastronomía en Amazonas, Perú.">
+
+    <title>Descubre Chachapoyas | Amazonas Perú</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESO -->
+    <div class="barra-progreso" id="barraProgreso"></div>
+
+
+    <!-- ================= MENU ================= -->
+
+    <nav class="navbar">
+
+        <a href="#inicio" class="logo">
+            AMAZONAS<span>.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#explorar">Destinos</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#cultura">Cultura</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= PORTADA ================= -->
+
+    <header class="hero" id="inicio">
+
+        <div class="fondo-plaza"></div>
+
+        <div class="contenido-portada">
+
+            <p class="bienvenida animacion-entrada">
+                BIENVENIDO A AMAZONAS
+            </p>
+
+            <h1 class="animacion-entrada">
+                Descubre<br>
+                Chachapoyas
+            </h1>
+
+            <p class="descripcion animacion-entrada">
+                Un destino lleno de historia, cultura y naturaleza.
+                Vive la magia de una de las regiones más sorprendentes
+                del Perú.
+            </p>
+
+            <a href="#explorar" class="boton animacion-entrada">
+                COMENZAR A EXPLORAR
+            </a>
+
+        </div>
+
+        <div class="texto-lateral">
+            AMAZONAS - PERÚ
+        </div>
+
+        <a href="#explorar" class="flecha">
+            ↓
+        </a>
+
+    </header>
+
+
+    <!-- ================= PRESENTACION ================= -->
+
+    <section class="presentacion revelar">
+
+        <p class="subtitulo">UN LUGAR POR DESCUBRIR</p>
+
+        <h2>
+            La magia de Amazonas
+        </h2>
+
+        <p class="presentacion-texto">
+            Chachapoyas es una ciudad ubicada en la región Amazonas,
+            reconocida por su riqueza histórica, sus paisajes naturales
+            y el legado de la antigua cultura Chachapoya.
+
+            Aquí encontrarás impresionantes cataratas, sitios
+            arqueológicos, montañas y tradiciones que hacen especial
+            a esta tierra.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTADORES ================= -->
+
+    <section class="estadisticas">
+
+        <div class="estadistica revelar">
+
+            <span class="contador" data-meta="6">0</span>
+
+            <p>Lugares destacados</p>
+
+        </div>
+
+        <div class="estadistica revelar">
+
+            <span class="contador" data-meta="3">0</span>
+
+            <p>Experiencias por descubrir</p>
+
+        </div>
+
+        <div class="estadistica revelar">
+
+            <span class="contador" data-meta="1">0</span>
+
+            <p>Destino inolvidable</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DESTINOS ================= -->
+
+    <section class="explorar" id="explorar">
+
+        <div class="titulo-seccion revelar">
+
+            <p class="subtitulo">
+                DESCUBRE NUESTROS ATRACTIVOS
+            </p>
+
+            <h2>Explora Amazonas</h2>
+
+            <p class="texto-seccion">
+                Conoce lugares increíbles que conservan la historia,
+                la cultura y la belleza natural de nuestra región.
+            </p>
+
+        </div>
+
+
+        <div class="contenedor-tarjetas">
+
+            <!-- GOCTA -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/gocta.jpg.jpg"
+                         alt="Catarata de Gocta"
+                         loading="lazy">
+                    <span class="etiqueta">NATURALEZA</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">01 / AMAZONAS</span>
+
+                    <h3>Catarata de Gocta</h3>
+
+                    <p>
+                        Una impresionante catarata rodeada de
+                        vegetación, montañas y paisajes naturales.
+                        Es uno de los atractivos más conocidos
+                        de la región Amazonas.
+                    </p>
+
+                    <a href="#gastronomia" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- KARAJIA -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/karajia.jpg.jpg"
+                         alt="Sarcófagos de Karajía"
+                         loading="lazy">
+                    <span class="etiqueta">HISTORIA</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">02 / AMAZONAS</span>
+
+                    <h3>Sarcófagos de Karajía</h3>
+
+                    <p>
+                        Un importante legado funerario de la
+                        cultura Chachapoya. Sus sarcófagos
+                        representan una muestra extraordinaria
+                        de las antiguas tradiciones.
+                    </p>
+
+                    <a href="#historia" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- KUELAP -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/kuelap.jpg.jpg"
+                         alt="Fortaleza de Kuélap"
+                         loading="lazy">
+                    <span class="etiqueta">ARQUEOLOGÍA</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">03 / AMAZONAS</span>
+
+                    <h3>Fortaleza de Kuélap</h3>
+
+                    <p>
+                        Una monumental construcción arqueológica
+                        de la cultura Chachapoya, ubicada en
+                        las montañas de Amazonas.
+                    </p>
+
+                    <a href="#historia" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- REVASH -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/revash.jpg.jpg"
+                         alt="Mausoleos de Revash"
+                         loading="lazy">
+                    <span class="etiqueta">CULTURA</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">04 / AMAZONAS</span>
+
+                    <h3>Pozo de Yanayacu</h3>
+
+                    <p>
+                        Lugar histórico ubicado en el cerro Luya Urco.
+            Según la tradición, Santo Toribio de Mogrovejo
+            hizo brotar agua para ayudar a la población durante
+            una época de sequía. También es conocido como
+            la Fuente del Amor.
+                    </p>
+
+                    <a href="#historia" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PLAZA -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/plaza.JPG.jpg"
+                         alt="Plaza de Armas de Chachapoyas"
+                         loading="lazy">
+                    <span class="etiqueta">CIUDAD</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">05 / AMAZONAS</span>
+
+                    <h3>Plaza de Chachapoyas</h3>
+
+                    <p>
+                        Un espacio tradicional rodeado de
+                        arquitectura, jardines y lugares
+                        representativos de la ciudad.
+                    </p>
+
+                    <a href="#cultura" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CIUDAD -->
+
+            <article class="tarjeta revelar">
+
+                <div class="imagen-tarjeta">
+                    <img src="imagenes/ciudad.jpg.jpg"
+                         alt="Vista de la ciudad de Chachapoyas"
+                         loading="lazy">
+                    <span class="etiqueta">TURISMO</span>
+                </div>
+
+                <div class="info-tarjeta">
+
+                    <span class="numero">06 / AMAZONAS</span>
+
+                    <h3>Ciudad de Chachapoyas</h3>
+
+                    <p>
+                        Descubre sus calles, arquitectura
+                        tradicional, paisajes y el encanto
+                        de su gente.
+                    </p>
+
+                    <a href="#cultura" class="enlace-tarjeta">
+                        DESCUBRIR MÁS →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HISTORIA ================= -->
+
+    <section class="historia" id="historia">
+
+        <div class="historia-imagen revelar">
+
+            <img src="imagenes/kuelap.jpg.jpg"
+                 alt="Historia de la cultura Chachapoya"
+                 loading="lazy">
+
+        </div>
+
+        <div class="historia-contenido revelar">
+
+            <p class="subtitulo">
+                UN LEGADO ANCESTRAL
+            </p>
+
+            <h2>
+                Historia de los Chachapoyas
+            </h2>
+
+            <p>
+                La cultura Chachapoya se desarrolló en los
+                Andes nororientales del Perú. Sus integrantes
+                construyeron importantes centros arqueológicos,
+                mausoleos y fortalezas que hasta hoy nos permiten
+                conocer su historia.
+            </p>
+
+            <p>
+                Sus construcciones de piedra y sus tradiciones
+                forman parte de un patrimonio cultural que
+                merece ser conocido y protegido.
+            </p>
+
+            <a href="#cultura" class="boton boton-oscuro">
+                CONOCE SU CULTURA
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CULTURA ================= -->
+
+    <section class="cultura" id="cultura">
+
+        <div class="titulo-seccion revelar">
+
+            <p class="subtitulo">TRADICIONES Y COSTUMBRES</p>
+
+            <h2>La esencia de Amazonas</h2>
+
+            <p class="texto-seccion">
+                Una región donde las tradiciones, la arquitectura
+                y las expresiones culturales mantienen viva su identidad.
+            </p>
+
+        </div>
+
+
+        <div class="cultura-grid">
+
+            <div class="cultura-item revelar">
+
+                <span>01</span>
+
+                <h3>Tradiciones</h3>
+
+                <p>
+                    Fiestas, celebraciones y costumbres
+                    transmitidas entre generaciones.
+                </p>
+
+            </div>
+
+
+            <div class="cultura-item revelar">
+
+                <span>02</span>
+
+                <h3>Arquitectura</h3>
+
+                <p>
+                    Construcciones tradicionales y
+                    monumentos que representan la historia.
+                </p>
+
+            </div>
+
+
+            <div class="cultura-item revelar">
+
+                <span>03</span>
+
+                <h3>Naturaleza</h3>
+
+                <p>
+                    Montañas, bosques, cataratas y
+                    paisajes llenos de biodiversidad.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GASTRONOMIA ================= -->
+
+    <section class="gastronomia" id="gastronomia">
+
+        <div class="gastronomia-contenido revelar">
+
+            <p class="subtitulo">
+                SABORES DE NUESTRA TIERRA
+            </p>
+
+            <h2>
+                Gastronomía de Amazonas
+            </h2>
+
+            <p>
+                La gastronomía de Amazonas combina ingredientes
+                locales y preparaciones tradicionales que
+                representan la identidad de sus pueblos.
+            </p>
+
+            <p>
+                Entre sus platos y productos tradicionales
+                destacan el cuy, los juanes, los tamales
+                y diversas preparaciones regionales.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INVITACION ================= -->
+
+    <section class="invitacion revelar">
+
+        <p class="subtitulo">
+            TU PROXIMA AVENTURA COMIENZA AQUI
+        </p>
+
+        <h2>
+            Amazonas te espera
+        </h2>
+
+        <p>
+            Ven y descubre los paisajes, la historia y
+            las maravillas de Chachapoyas.
+        </p>
+
+        <a href="#inicio" class="boton">
+            VOLVER AL INICIO
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <h2>DESCUBRE CHACHAPOYAS</h2>
+
+        <p>
+            Historia, cultura y naturaleza en el corazón de Amazonas.
+        </p>
+
+        <div class="footer-enlaces">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#explorar">Destinos</a>
+            <a href="#historia">Historia</a>
+            <a href="#cultura">Cultura</a>
+
+        </div>
+
+        <p class="copyright">
+            © <span id="anio"></span> Descubre Chachapoyas.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- BOTON VOLVER ARRIBA -->
+
+    <button id="volverArriba" class="volver-arriba"
+            aria-label="Volver arriba">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

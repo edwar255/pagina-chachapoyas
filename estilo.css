@@ -1,0 +1,1060 @@
+
+/* =========================================
+   1. CONFIGURACION GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ef;
+    color: #292929;
+    overflow-x: hidden;
+}
+
+:root {
+    --dorado: #d49b38;
+    --oscuro: #292722;
+    --crema: #f5f3ef;
+    --blanco: #ffffff;
+}
+
+
+/* =========================================
+   2. BARRA DE PROGRESO
+========================================= */
+
+.barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 4px;
+
+    background: var(--dorado);
+
+    z-index: 2000;
+}
+
+
+/* =========================================
+   3. MENU DE NAVEGACION
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(35, 34, 30, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.3s;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--dorado);
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dorado);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   4. PORTADA PRINCIPAL
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #333;
+}
+
+
+/* IMAGEN DE LA PLAZA */
+
+.fondo-plaza {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("imagenes/plaza.JPG.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: zoomFondo 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomFondo {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.10);
+    }
+}
+
+
+/* CONTENIDO DE PORTADA */
+
+.contenido-portada {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1100px;
+
+    padding: 120px 9%;
+
+    color: white;
+}
+
+.bienvenida {
+    color: var(--dorado);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+.contenido-portada h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: normal;
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+.descripcion {
+    max-width: 600px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* TEXTO LATERAL */
+
+.texto-lateral {
+    position: absolute;
+
+    right: 35px;
+    top: 50%;
+
+    transform: rotate(90deg) translateX(50%);
+
+    transform-origin: right;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    z-index: 2;
+}
+
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+
+    padding: 19px 32px;
+
+    background: var(--dorado);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.4s;
+}
+
+.boton:hover {
+    background: white;
+    color: var(--oscuro);
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.boton-oscuro {
+    margin-top: 20px;
+}
+
+
+/* FLECHA */
+
+.flecha {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 38px;
+
+    text-decoration: none;
+
+    z-index: 2;
+
+    animation: saltar 1.5s infinite;
+}
+
+@keyframes saltar {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 12px);
+    }
+}
+
+
+/* =========================================
+   5. ANIMACIONES DE ENTRADA
+========================================= */
+
+.animacion-entrada {
+    opacity: 0;
+    animation: aparecer 1s ease forwards;
+}
+
+.animacion-entrada:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.animacion-entrada:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.animacion-entrada:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.animacion-entrada:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   6. SECCIONES GENERALES
+========================================= */
+
+.subtitulo {
+    color: #bb842d;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-seccion h2,
+.presentacion h2,
+.historia h2,
+.gastronomia h2,
+.invitacion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.texto-seccion {
+    color: #666;
+
+    max-width: 680px;
+
+    margin: auto;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   7. PRESENTACION
+========================================= */
+
+.presentacion {
+    text-align: center;
+
+    padding: 110px 10%;
+
+    background: var(--crema);
+}
+
+.presentacion-texto {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #666;
+
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   8. ESTADISTICAS
+========================================= */
+
+.estadisticas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background: var(--oscuro);
+
+    padding: 65px 8%;
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+.estadistica span {
+    display: block;
+
+    color: var(--dorado);
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    margin-bottom: 12px;
+}
+
+.estadistica p {
+    color: white;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   9. DESTINOS TURISTICOS
+========================================= */
+
+.explorar {
+    padding: 110px 8%;
+
+    background: var(--crema);
+}
+
+.contenedor-tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.tarjeta {
+    background: white;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+
+    transition: 0.4s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-12px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.imagen-tarjeta {
+    height: 270px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.imagen-tarjeta img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s;
+}
+
+.tarjeta:hover .imagen-tarjeta img {
+    transform: scale(1.12);
+}
+
+.etiqueta {
+    position: absolute;
+
+    bottom: 15px;
+    left: 15px;
+
+    padding: 9px 15px;
+
+    background: var(--dorado);
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.info-tarjeta {
+    padding: 30px;
+}
+
+.numero {
+    color: var(--dorado);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.info-tarjeta h3 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin: 18px 0;
+}
+
+.info-tarjeta p {
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.enlace-tarjeta {
+    color: #b7832c;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.enlace-tarjeta:hover {
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   10. HISTORIA
+========================================= */
+
+.historia {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 110px 9%;
+
+    background: white;
+}
+
+.historia-imagen {
+    overflow: hidden;
+
+    height: 480px;
+}
+
+.historia-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+.historia-imagen:hover img {
+    transform: scale(1.07);
+}
+
+.historia-contenido p:not(.subtitulo) {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   11. CULTURA
+========================================= */
+
+.cultura {
+    padding: 110px 8%;
+
+    background: #eeeae1;
+}
+
+.cultura-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.cultura-item {
+    background: white;
+
+    padding: 45px 30px;
+
+    border-bottom: 4px solid var(--dorado);
+
+    transition: 0.4s;
+}
+
+.cultura-item:hover {
+    transform: translateY(-10px);
+
+    background: var(--oscuro);
+
+    color: white;
+}
+
+.cultura-item span {
+    color: var(--dorado);
+
+    font-size: 35px;
+
+    font-family: Georgia, serif;
+}
+
+.cultura-item h3 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin: 20px 0;
+}
+
+.cultura-item p {
+    color: #777;
+
+    line-height: 1.8;
+}
+
+.cultura-item:hover p {
+    color: #ddd;
+}
+
+
+/* =========================================
+   12. GASTRONOMIA
+========================================= */
+
+.gastronomia {
+    padding: 120px 10%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.75)
+        ),
+        url("imagenes/ciudad.jpg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.gastronomia-contenido {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.gastronomia-contenido p:not(.subtitulo) {
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #eee;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   13. INVITACION FINAL
+========================================= */
+
+.invitacion {
+    text-align: center;
+
+    padding: 110px 8%;
+
+    background: var(--crema);
+}
+
+.invitacion p:not(.subtitulo) {
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   14. FOOTER
+========================================= */
+
+.footer {
+    background: #26251f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 20px;
+}
+
+.footer h2 {
+    color: var(--dorado);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #ccc;
+
+    line-height: 1.8;
+}
+
+.footer-enlaces {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 30px 0;
+}
+
+.footer-enlaces a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-enlaces a:hover {
+    color: var(--dorado);
+}
+
+.copyright {
+    margin-top: 30px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   15. BOTON VOLVER ARRIBA
+========================================= */
+
+.volver-arriba {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    background: var(--dorado);
+
+    border: none;
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 900;
+}
+
+.volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.volver-arriba:hover {
+    background: var(--oscuro);
+}
+
+
+/* =========================================
+   16. ANIMACION AL DESPLAZARSE
+========================================= */
+
+.revelar {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.revelar.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   17. TABLETS
+========================================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .historia {
+        gap: 35px;
+        padding: 80px 6%;
+    }
+
+}
+
+
+/* =========================================
+   18. CELULARES
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background: rgba(35,34,30,0.98);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 25px 0;
+
+        gap: 25px;
+    }
+
+    .nav-links.activo {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .fondo-plaza {
+        background-position: center;
+    }
+
+    .contenido-portada {
+        padding: 100px 7%;
+    }
+
+    .bienvenida {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 55px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .texto-lateral {
+        display: none;
+    }
+
+    .boton {
+        padding: 16px 20px;
+        font-size: 11px;
+    }
+
+    .presentacion,
+    .explorar,
+    .cultura,
+    .invitacion {
+        padding: 75px 6%;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .historia {
+        grid-template-columns: 1fr;
+        padding: 75px 6%;
+    }
+
+    .historia-imagen {
+        height: 300px;
+    }
+
+    .cultura-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gastronomia {
+        padding: 80px 7%;
+    }
+
+}
+
+
+/* =========================================
+   19. RESPETAR PREFERENCIA DE MOVIMIENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+
+}
